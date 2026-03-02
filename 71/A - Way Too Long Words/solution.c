@@ -1,1 +1,25 @@
-#include <stdio.h>#include <string.h> int main() {    int n;    scanf("%d", &n);     char s_arr[n][100];    for (int i = 0; i < n; i++) {        char key[100];        scanf("%s", key);                if (strlen(key) <= 10) {            strcpy(s_arr[i], key);        } else {            snprintf(key, 5, "%c%d%c", key[0], strlen(key) - 2, key[strlen(key) - 1]);            strcpy(s_arr[i], key);        }    }     for (int i = 0; i < n; i++) {        printf("%s\n", s_arr[i]);    }     return 0;}
+#include <stdio.h>
+#include <string.h> 
+
+int main() {    
+  int n;    
+  scanf("%d", &n);     
+  char s_arr[n][100];    
+  
+  for (int i = 0; i < n; i++) {        
+    char key[100];        
+    scanf("%s", key);                
+    
+    if (strlen(key) <= 10) {            
+      strcpy(s_arr[i], key);        
+    } else {            
+      snprintf(key, 5, "%c%d%c", key[0], strlen(key) - 2, key[strlen(key) - 1]);            
+      strcpy(s_arr[i], key);        
+    }    
+  }     
+  
+  for (int i = 0; i < n; i++) {        
+    printf("%s\n", s_arr[i]);    
+  }     
+  
+  return 0;}
