@@ -1,0 +1,1 @@
+#include <stdio.h>#include <stdlib.h>#include <string.h> int main() {    char *key = (char*)malloc(100 * sizeof(char));    scanf("%s", key);     if (strstr(key, "1111111") || strstr(key, "0000000")) {        printf("YES");    } else {        printf("NO");    }     free(key);    return 0;}
